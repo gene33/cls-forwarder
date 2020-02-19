@@ -1,0 +1,10 @@
+---
+- hosts: centos
+  become: yes
+  tasks:
+  - name: Install Java
+    include_role: 
+      name: ansible-role-java
+  - name: Install Logstash
+    include_role:
+      name: ansible-role-logstash
